@@ -26,68 +26,70 @@
       <div class="col-sm-8">
         <form action="">
           <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Nombre:</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Escribe tu nombre">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Escribe tu nombre" required>
           </div>
           <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Edad:</label>
-            <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Escribe tu edad">
+            <label for="edad" class="form-label">Edad:</label>
+            <input type="number" class="form-control" id="edad" placeholder="Escribe tu edad" min="1" max="120"
+              required>
           </div>
           <div class="mb-3">
             <label class="form-label">¿Cuál es tu familia olfativa preferida?</label>
-            <select class="form-select" aria-label="Default select example">
-              <option selected></option>
-              <option value="1">Cítrica</option>
-              <option value="2">Floral</option>
-              <option value="3">Amaderada</option>
+            <select class="form-select" aria-label="Familia olfativa" id="familia-olfativa" required>
+              <option value="" selected>Selecciona una opción</option>
+              <option value="citrica">Cítrica</option>
+              <option value="floral">Floral</option>
+              <option value="amaderada">Amaderada</option>
             </select>
           </div>
           <div class="mb-3">
             <p><b>¿Qué tipo de fragancias prefieres?</b></p>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
-              <label class="form-check-label" for="radioDefault1">Femenina</label>
+              <input class="form-check-input" type="radio" name="tipoFragancia" id="femenina" value="femenina" required>
+              <label class="form-check-label" for="femenina">Femenina</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2">
-              <label class="form-check-label" for="radioDefault2">Masculina</label>
+              <input class="form-check-input" type="radio" name="tipoFragancia" id="masculina" value="masculina"
+                required>
+              <label class="form-check-label" for="masculina">Masculina</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault3">
-              <label class="form-check-label" for="radioDefault3">Unisex</label>
+              <input class="form-check-input" type="radio" name="tipoFragancia" id="unisex" value="unisex" required>
+              <label class="form-check-label" for="unisex">Unisex</label>
             </div>
           </div>
           <div class="mb-3">
             <p><b>¿Qué concentraciones utilizas de manera habitual?</b> </p>
             <p class="text-muted">Selecciona todos los que quieras</p>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="checkChecked">
-              <label class="form-check-label" for="checkChecked">
+              <input class="form-check-input" type="checkbox" value="edc" id="edc" name="concentraciones">
+              <label class="form-check-label" for="edc">
                 Eau de Cologne (EDC): 3-5%, duración moderada, ideal para el uso diario.
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="checkChecked">
-              <label class="form-check-label" for="checkChecked">
+              <input class="form-check-input" type="checkbox" value="edt" id="edt" name="concentraciones">
+              <label class="form-check-label" for="edt">
                 Eau de toilette (EDT): 4-8% duración media, versátil, para diferentes ocasiones.
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="checkChecked">
-              <label class="form-check-label" for="checkChecked">
+              <input class="form-check-input" type="checkbox" value="edp" id="edp" name="concentraciones">
+              <label class="form-check-label" for="edp">
                 Eau de parfum (EDP): 8-15% duración prolongada, para la noche o eventos.
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="checkChecked">
-              <label class="form-check-label" for="checkChecked">
+              <input class="form-check-input" type="checkbox" value="parfum" id="parfum" name="concentraciones">
+              <label class="form-check-label" for="parfum">
                 Parfum (P) o Extrait de Parfum: 15-30%, duración muy prolongada.
               </label>
             </div>
           </div>
           <div class="mb-3">
-            <label for="resena" class="form-label"><b>Nombra tres de tus perfumes preferidos</b></label>
-            <textarea class="form-control" id="resena" rows="2"
+            <label for="perfumes-preferidos" class="form-label"><b>Nombra tres de tus perfumes preferidos</b></label>
+            <textarea class="form-control" id="perfumes-preferidos" name="perfumes-preferidos" rows="2"
               placeholder="Zero plus (Diesel), 212 (Carolina Herrera), Blanc (Lacoste)"></textarea>
           </div>
           <div class="text-center">
